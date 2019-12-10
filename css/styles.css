@@ -4,6 +4,13 @@
     :root {
         --main-heading-font:'Bubblegum Sans', cursive;
         --main-text-font: 'Roboto', sans-serif;
+
+        /*First Palette*/
+        --main-theme-color: #78ae31;
+        --secondary-theme-color: #e246a5;
+        --btn-hover-color: #7f1bc3;
+        --main-font-color: #881967;
+
     }
     * {
         margin: 0;
@@ -12,8 +19,9 @@
         font-family: var(--main-text-font);
     }
     body {
-        background-color: lightgreen;
         max-width: 1024px;
+        background-color: var(--main-theme-color);
+        color: var(--main-font-color);
     }
 
     .main-header {
@@ -23,6 +31,13 @@
     .account-links {
         font-size: .8rem;
         color: blue;
+    }
+    .btn {
+        background-color: var(--secondary-theme-color);
+        border: none;
+    }
+    .btn:hover {
+        background-color: #7f1bc3;
     }
     #login-page {
         animation: fadeIn;
