@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Roboto&display=swap');
+
+@media screen and (min-width:300px) and (max-width:1024px) {
+    :root {
+        --main-heading-font:'Bubblegum Sans', cursive;
+        --main-text-font: 'Roboto', sans-serif;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--main-text-font);
+    }
+    body {
+        background-color: lightgreen;
+        max-width: 1024px;
+    }
+
+    .main-header {
+        font-family: var(--main-heading-font);
+        font-size: 3rem;
+    }
+    .account-links {
+        font-size: .8rem;
+        color: blue;
+    }
+    #login-page {
+        animation: fadeIn;
+        animation-duration: 2s;
+    }
+    #home-page {
+        animation: fadeIn;
+        animation-duration: 2s;
+    }
+    #login-page-header-container {
+        text-align: center;
+    }
+    #home-page-header-container {
+        text-align: center;
+    }
+    #mascot-img {
+        /*Maybe change to dynamic size later*/
+        height: 165px;
+        width: 240px;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
+
+}
