@@ -29,3 +29,9 @@ h1{
 .border-r{
     border-right: 10px solid black;
 }
+.zero {
+    background-color: green;
+}
+.ex {
+    background-color: red;
+}
