@@ -2,21 +2,35 @@
 
 @media screen and (min-width:300px) and (max-width:1024px) {
     :root {
-        --main-heading-font:'Bubblegum Sans', cursive;
-        --main-text-font: 'Roboto', sans-serif;
+        --main-text-font:'Bubblegum Sans', cursive;
+        --secondary-text-font: 'Roboto', sans-serif;
 
-        /*First Palette*/
+/*        !*First Palette*!
         --main-theme-color: #78ae31;
         --secondary-theme-color: #e246a5;
         --btn-hover-color: #7f1bc3;
-        --main-font-color: #881967;
+        --main-font-color: #fff;*/
+
+/*        !*Second Palette*!
+        --main-theme-color: #007d6b;
+        --secondary-theme-color: #f96171;
+        --main-font-color: #c9f45f;
+        --nav-links-color: #fff;
+        --hover-color: #bf0012;*/
+
+        /*Third Palette*/
+        --main-theme-color: #84253e;
+        --secondary-theme-color: #a6cc13;
+        --main-font-color: #a6cc13;
+        --nav-links-color: #fff;
+        --hover-color: #cfe27d;
 
     }
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: var(--main-text-font);
+        font-family: var(--secondary-text-font);
     }
     body {
         max-width: 1024px;
@@ -25,19 +39,25 @@
     }
 
     .main-header {
-        font-family: var(--main-heading-font);
+        font-family: var(--main-text-font);
         font-size: 3rem;
+    }
+    .sub-header {
+        font-family: var(--main-text-font);
     }
     .account-links {
         font-size: .8rem;
-        color: blue;
+        color: var(--nav-links-color);
+    }
+    .account-links:hover {
+        color: var(--hover-color);
     }
     .btn {
         background-color: var(--secondary-theme-color);
         border: none;
     }
     .btn:hover {
-        background-color: #7f1bc3;
+        background-color: var(--hover-color);
     }
     #login-page {
         animation: fadeIn;
