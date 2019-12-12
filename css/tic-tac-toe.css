@@ -1,12 +1,15 @@
 .container{
     width: 320px;
     height: 320px;
-    margin: auto;
-    margin-top: 100px;
+    margin: 100px auto auto;
+    background-color: #84253E;
 }
 h1{
     text-align: center;
     font-size: 50px;
+}
+.title{
+    color: #A5CC11;
 }
 .row{
     height: 100px;
@@ -20,18 +23,23 @@ h1{
     line-height: 100px;
 }
 .col:hover{
-    background-color: rebeccapurple;
+    background-color: green;
 }
 .border-b{
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #A5CC11;
 
 }
 .border-r{
-    border-right: 10px solid black;
+    border-right: 10px solid #A5CC11;
 }
-.zero {
-    background-color: green;
+.winner{
+    color: blue;
+
 }
-.ex {
-    background-color: red;
-}
+
+/*.zero {*/
+/*    background-color: green;*/
+/*}*/
+/*.ab {*/
+/*    background-color: red;*/
+/*}*/
