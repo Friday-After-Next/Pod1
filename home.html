@@ -15,23 +15,26 @@
 <!--Home Page container-->
 
 <!--------------------    HOME TOP NAV     ------------------------>
-<div class="container my-4" id="home-page">
+<div class="container m-2 border border-primary" id="home-page">
 
-    <div class="row mx-0 my-3 d-flex">
+    <div class="container p-0">
+        <div class="row mx-0 my-3 d-flex justify-content-between">
 
-        <div class="col-8 d-flex justify-content-end mx-4">
-            <nav class="navbar navbar-light">
-                <h2>
-                    $BALANCE
-                </h2>
-            </nav>
+            <div class="col-9 d-flex justify-content-end p-0">
+                <nav class="navbar navbar-light p-0">
+                    <h2 class="m-0">
+                        $BALANCE
+                    </h2>
+                </nav>
+            </div>
+
+            <div class="col-3 d-flex justify-content-end p-0" style="width: 85px">
+                <button type="button" class="btn btn-light btn-sm m-0 p-2">Logout</button>
+            </div>
+
         </div>
-
-        <div class="col d-flex justify-content-end mx-n5">
-            <button type="button" class="btn btn-light btn-sm">Logout</button>
-        </div>
-
     </div>
+
 
     <div class="container my-5 py-5">
 
@@ -44,38 +47,36 @@
 <!--        <h1 class="main-header">Welcome to Kid Invest!</h1>-->
 <!--        <h4 class="sub-header">Choose an option below</h4>-->
 <!--    </div>-->
+    <div class="container">
+        <div class="row border border-primary mx-n5 d-flex mx-0 p-0" id="anchor-tags">
 
 
-    <div class="row" id="anchor-tags">
-
-        <div class="col-2">
-
-            <div class="dropdown-menu">
-                <h6 class="dropdown-header">Account Details</h6>
-                <a class="dropdown-item" href="#">Expenses</a>
-                <a class="dropdown-item" href="#">Withdrawals</a>
-                <a class="dropdown-item" href="#">Deposits</a>
+            <div class="col-3 card text-right bg-transparent p-0 m-0">
+                <ul class="">
+                    <li class="list-group-item bg-transparent border-0"><a href="#">Expenses</a></li>
+                    <li class="list-group-item bg-transparent border-0"><a href="#">Withdrawals</a></li>
+                    <li class="list-group-item bg-transparent border-0"><a href="#">Deposits</a></li>
+                </ul>
             </div>
 
-        </div>
 
 
-        <div class="col-8 text-center">
-            <img src="img/Pigglesworth.png" class="rounded img-fluid" alt="Pigglesworth the pig with monocle picture.">
-        </div>
-
-
-        <div class="col-2">
-
-            <div class="dropdown-menu">
-                <h6 class="dropdown-header">Invest</h6>
-                <a class="dropdown-item" href="#">Chores</a>
-                <a class="dropdown-item" href="#">Games</a>
-                <a class="dropdown-item" href="#">Quizzes</a>
+            <div class="col-6 m-0">
+                <img src="img/Pigglesworth.png" class="rounded img-fluid" alt="Pigglesworth the pig with monocle picture.">
             </div>
 
-        </div>
 
+
+            <div class="col-3 card text-left bg-transparent mr-0 p-0">
+                <ul class="">
+                    <li class="list-group-item bg-transparent border-0"><a href="#">Chores</a></li>
+                    <li class="list-group-item bg-transparent border-0"><a href="#">Games</a></li>
+                    <li class="list-group-item bg-transparent border-0"><a href="#">Quizzes</a></li>
+                </ul>
+            </div>
+
+
+        </div>
     </div>
 
 
