@@ -85,7 +85,12 @@
     ul li a{
         color: var(--main-font-color);
         font-size: 18px;
+        font-weight: bold;
     }
+    .home-links:hover{
+        text-decoration: none;
+        color: var(--secondary-theme-color);
+     }
 
     @keyframes fadeIn {
         from {
