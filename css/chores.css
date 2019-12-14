@@ -39,6 +39,10 @@
         color: var(--main-font-color);
     }
 
+    .money {
+        font-weight: bold;
+    }
+
     .main-header {
         font-family: var(--main-text-font);
         font-size: 3rem;
