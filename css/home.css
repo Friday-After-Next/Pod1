@@ -20,11 +20,10 @@
 
         /*Third Palette*/
         --main-theme-color: #efdfcf;
-        --secondary-theme-color: #ff9e25;
-        --main-font-color: #01907e;
+        --secondary-theme-color: #9b2943;
+        --main-font-color: #00aa51;
         --nav-links-color: #fff;
-        --hover-color: #f97319;
-
+        --hover-color: #4c1427;
     }
     * {
         margin: 0;
@@ -44,42 +43,38 @@
         font-family: var(--main-text-font);
         font-size: 3rem;
     }
+
     .sub-header {
         font-family: var(--main-text-font);
     }
-    .account-links {
-        font-size: .8rem;
-        color: var(--nav-links-color);
-    }
-    .account-links:hover {
-        color: var(--hover-color);
-    }
+
     .btn {
         background-color: var(--secondary-theme-color);
         border: none;
     }
+
     .btn:hover {
         background-color: var(--hover-color);
     }
-    #login-page {
-        animation: fadeIn;
-        animation-duration: 2s;
+
+    .btn-directory {
+        color: var(--main-font-color);
+        font-size: 1.5em;
+        font-weight: bolder;
+
     }
+    .btn-directory:hover{
+        color: #007035;
+    }
+
     #home-page {
         animation: fadeIn;
         animation-duration: 2s;
         /*display: none;*/
     }
-    #login-page-header-container {
-        text-align: center;
-    }
+
     #home-page-header-container {
         text-align: center;
-    }
-    #mascot-img {
-        /*Maybe change to dynamic size later*/
-        height: 165px;
-        width: 240px;
     }
 
     ul li a{
