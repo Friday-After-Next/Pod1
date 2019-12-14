@@ -13,67 +13,55 @@
 <body>
 
 <!--Home Page container-->
-
-<!--------------------    HOME TOP NAV     ------------------------>
 <div class="container m-2" id="home-page">
 
-    <div class="container p-0">
-        <div class="row mx-0 my-3 d-flex">
+    <!----------------- NAV BAR STARTS ----------------->
+    <div class="row pb-5">
+        <div class="col-12 px-0">
 
-            <div class="col-9 d-flex justify-content-end pr-3">
-                <nav class="navbar navbar-light p-0">
-                    <h2 class="m-0">
-                        $BALANCE
-                    </h2>
-                </nav>
-            </div>
+            <!----------------- NAV TITLE/LOGO ----------------->
+            <nav class="navbar navbar-light bg-transparent">
 
-            <div class="col-3 d-flex justify-content-end p-0" style="width: 85px">
-                <button type="button" class="btn btn-light btn-sm m-0 p-2">Logout</button>
-            </div>
+                <div class="pr-5"></div>
+
+                <h4 class="m-0 py-0 main-header">$Balance</h4>
+                <button type="button" class="btn btn-secondary shadow-sm">Logout</button>
+            </nav>
 
         </div>
     </div>
+    <!----------------- NAV BAR ENDS ----------------->
 
 
-    <div class="container my-5 py-5">
+<!--    <div class="container my-5 py-5">-->
 
-    </div>
+<!--    </div>-->
 
 
 <!--------------------    HOME DIRECTORY     ------------------------>
 
-<!--    <div class="container" id="home-page-header-container">-->
-<!--        <h1 class="main-header">Welcome to Kid Invest!</h1>-->
-<!--        <h4 class="sub-header">Choose an option below</h4>-->
-<!--    </div>-->
-    <div class="container">
-        <div class="row mx-n5 d-flex mx-0 p-0" id="anchor-tags">
+        <div class="row d-flex mx-0 p-0" id="anchor-tags">
 
-
-            <div class="col-3 card d-flex text-right bg-transparent p-0 m-0 border-0">
-                <ul class="flex-column align-content-evenly">
-                    <li class="list-group-item bg-transparent border-0 px-0"><a class="home-links" href="#">Expenses</a></li>
-                    <li class="list-group-item bg-transparent border-0 px-0"><a class="home-links" href="#">Withdrawals</a></li>
-                    <li class="list-group-item bg-transparent border-0 px-0"><a class="home-links" href="#">Deposits</a></li>
-                </ul>
+            <div class="col-3 card d-flex flex-column justify-content-between bg-transparent p-0 m-0 border-0">
+                <button type="button" class="px-0 btn bg-transparent btn-lg btn-block text-right btn-directory">Expenses</button>
+                <button type="button" class="px-0 btn bg-transparent btn-lg btn-block text-right btn-directory">Withdrawals</button>
+                <button type="button" class="px-0 btn bg-transparent btn-lg btn-block text-right btn-directory">Deposits</button>
             </div>
 
-            <div class="col-6 m-0">
-                <img src="img/Pigglesworth.png" class="rounded img-fluid" alt="Pigglesworth the pig with monocle picture.">
+            <div class="col-6">
+                <img src="img/pigglesworth.png" class="d-flex justify-content-center m-0 rounded img-fluid"
+                     alt="Pigglesworth the pig with monocle picture." data-container="body" data-toggle="popover"
+                     data-placement="bottom"
+                     data-content="Monitor your account on the left and invest on the right. Tap on me for more tip. Have fun!">
             </div>
 
-            <div class="col-3 card text-left bg-transparent mr-0 p-0 border-0">
-                <ul class="d-flex flex-column align-content-evenly">
-                    <li class="list-group-item bg-transparent border-0 px-0"><a class="home-links" href="#">Chores</a></li>
-                    <li class="list-group-item bg-transparent border-0 px-0"><a class="home-links" href="#">Games</a></li>
-                    <li class="list-group-item bg-transparent border-0 px-0"><a class="home-links" href="#">Quizzes</a></li>
-                </ul>
+            <div class="col-3 card d-flex flex-column justify-content-between bg-transparent p-0 m-0 border-0">
+                <button type="button" class="px-0 btn bg-transparent btn-lg btn-block text-left btn-directory">Chores</button>
+                <button type="button" class="px-0 btn bg-transparent btn-lg btn-block text-left btn-directory">Games</button>
+                <button type="button" class="px-0 btn bg-transparent btn-lg btn-block text-left btn-directory">Quizzes</button>
             </div>
-
 
         </div>
-    </div>
 
 
 
@@ -104,5 +92,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+
 </body>
 </html>
