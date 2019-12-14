@@ -44,6 +44,11 @@
         font-size: 3rem;
     }
 
+    #chores-page {
+        animation: fadeIn;
+        animation-duration: 2s;
+    }
+
     .btn {
         background-color: var(--secondary-theme-color);
         border: none;
