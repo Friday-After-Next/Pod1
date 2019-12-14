@@ -39,46 +39,26 @@
         color: var(--main-font-color);
     }
 
+    .money {
+        font-weight: bold;
+    }
+
     .main-header {
         font-family: var(--main-text-font);
         font-size: 3rem;
     }
-    .sub-header {
-        font-family: var(--main-text-font);
+
+    #chores-page {
+        animation: fadeIn;
+        animation-duration: 2s;
     }
-    .account-links {
-        font-size: .8rem;
-        color: var(--nav-links-color);
-    }
-    .account-links:hover {
-        color: var(--hover-color);
-    }
+
     .btn {
         background-color: var(--secondary-theme-color);
         border: none;
     }
     .btn:hover {
         background-color: var(--hover-color);
-    }
-    #login-page {
-        animation: fadeIn;
-        animation-duration: 2s;
-    }
-    #home-page {
-        animation: fadeIn;
-        animation-duration: 2s;
-        display: none;
-    }
-    #login-page-header-container {
-        text-align: center;
-    }
-    #home-page-header-container {
-        text-align: center;
-    }
-    #mascot-img {
-        /*Maybe change to dynamic size later*/
-        height: 165px;
-        width: 240px;
     }
 
     @keyframes fadeIn {
