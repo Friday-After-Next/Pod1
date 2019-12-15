@@ -1,0 +1,62 @@
+#container{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    text-align: center;
+}
+#green{
+    background-color: green;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-bottom: 2px;
+}
+#red{
+    background-color: red;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-bottom: 2px;
+
+
+}
+#yellow{
+    background-color: yellow;
+    width: 70px;
+    height: 70px;
+    clear: left;
+    float: left;
+    margin-top: 5px;
+
+}
+#blue{
+    background-color: blue;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+#green:active{
+    background-color: lightgreen;
+}
+#red:active{
+    background-color: pink;
+}
+#yellow:active{
+    background-color: lightyellow;
+}
+#blue:active{
+    background-color: lightblue;
+}
+.box{
+    margin: 0 auto;
+    width: 45px;
+    border: 1px solid black;
+    text-align: center;
+}
+#start:hover{
+    cursor: pointer;
+}
+#show-rounds{}

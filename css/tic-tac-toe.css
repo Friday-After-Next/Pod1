@@ -1,35 +1,31 @@
-
-.container{
-    width: 320px;
-    height: 450px;
-    margin: 500px 0px auto;
-    background-color: #84253E;
-
-    position: absolute;
-    top: 400px;
+.body{
+    background-color: #efdecf;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
 h1{
-    text-align: center;
+    text-align: left;
     font-size: 50px;
 }
-.title{
+#title{
     color: #A5CC11;
 }
 .row{
-    height: 100px;
+    height: 150px;
 }
 .col{
-    height: 100px;
+    height: 150px;
     width: 100px;
     float: left;
     font-size: 100px;
     text-align: center;
     line-height: 100px;
 }
-.col:hover{
-    background-color: green;
-}
+/*.col:hover{*/
+/*    background-color: green;*/
+/*}*/
 .border-b{
     border-bottom: 10px solid black;
 
@@ -40,6 +36,28 @@ h1{
 .winner{
     color: blue;
 
+}
+.home-button{
+    font-size: 3rem;
+    color: white;
+    background-color: #9b2943;
+}
+.back-game-button{
+    font-size: 3rem;
+    color: white;
+    background-color: #9b2943;
+}
+#game-name{
+    color: #00aa51;
+}
+#game-heading{
+    font-size: 100px;
+    text-align: center;
+    color: #00AA51;
+}
+#mascot{
+    /*position: absolute;*/
+    margin-top: 5em;
 }
 
 /*.zero {*/
