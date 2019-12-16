@@ -87,6 +87,11 @@
         color: var(--secondary-theme-color);
      }
 
+    /*.reducefontsize{*/
+    /*    font-style: normal;*/
+    /*    font-size: 18px ! important;*/
+    /*}*/
+
     @keyframes fadeIn {
         from {
             opacity: 0;
