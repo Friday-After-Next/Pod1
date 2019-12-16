@@ -59,7 +59,7 @@
 
     .btn-directory {
         color: var(--main-font-color);
-        font-size: 1.5em;
+        font-size: 115%;
         font-weight: bolder;
 
     }
@@ -79,13 +79,18 @@
 
     ul li a{
         color: var(--main-font-color);
-        font-size: 18px;
+        font-size: 18rem;
         font-weight: bold;
     }
     .home-links:hover{
         text-decoration: none;
         color: var(--secondary-theme-color);
      }
+
+    /*.reducefontsize{*/
+    /*    font-style: normal;*/
+    /*    font-size: 18px ! important;*/
+    /*}*/
 
     @keyframes fadeIn {
         from {

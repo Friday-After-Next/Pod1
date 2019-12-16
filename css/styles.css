@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Roboto&display=swap');
 
-@media screen and (min-width:300px) and (max-width:1024px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
     :root {
-        --main-text-font:'Bubblegum Sans', cursive;
+        --main-text-font: 'Bubblegum Sans', cursive;
         --secondary-text-font: 'Roboto', sans-serif;
 
-/*        !*First Palette*!
-        --main-theme-color: #78ae31;
-        --secondary-theme-color: #e246a5;
-        --btn-hover-color: #7f1bc3;
-        --main-font-color: #fff;*/
+        /*        !*First Palette*!
+                --main-theme-color: #78ae31;
+                --secondary-theme-color: #e246a5;
+                --btn-hover-color: #7f1bc3;
+                --main-font-color: #fff;*/
 
-/*        !*Second Palette*!
-        --main-theme-color: #007d6b;
-        --secondary-theme-color: #f96171;
-        --main-font-color: #c9f45f;
-        --nav-links-color: #fff;
-        --hover-color: #bf0012;*/
+        /*        !*Second Palette*!
+                --main-theme-color: #007d6b;
+                --secondary-theme-color: #f96171;
+                --main-font-color: #c9f45f;
+                --nav-links-color: #fff;
+                --hover-color: #bf0012;*/
 
         /*Third Palette*/
         --main-theme-color: #84253e;
@@ -26,12 +26,14 @@
         --hover-color: #cfe27d;
 
     }
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: var(--secondary-text-font);
     }
+
     body {
         max-width: 1024px;
         background-color: var(--main-theme-color);
@@ -42,42 +44,73 @@
         font-family: var(--main-text-font);
         font-size: 3rem;
     }
+
     .sub-header {
         font-family: var(--main-text-font);
     }
+
     .account-links {
         font-size: .8rem;
         color: var(--nav-links-color);
     }
+
     .account-links:hover {
         color: var(--hover-color);
     }
+
     .btn {
         background-color: var(--secondary-theme-color);
         border: none;
     }
+
     .btn:hover {
         background-color: var(--hover-color);
     }
+
+    .close-modal {
+        position: relative;
+        top: -1000px;
+        display: none;
+    }
+
+    .open-modal {
+        position: relative;
+        top: -325px;
+        display: block;
+        animation: 0.4s slideDown;
+    }
+
     #login-page {
         animation: fadeIn;
         animation-duration: 2s;
     }
+
     #home-page {
         animation: fadeIn;
         animation-duration: 2s;
         display: none;
     }
+
     #login-page-header-container {
         text-align: center;
     }
+
     #home-page-header-container {
         text-align: center;
     }
+
     #mascot-img {
         /*Maybe change to dynamic size later*/
         height: 165px;
         width: 240px;
+    }
+
+    #account-creation-container {
+        background-color: white;
+        border-radius: .8rem;
+        width: 80%;
+        height: 22rem;
+        /*display: none;*/
     }
 
     @keyframes fadeIn {
@@ -89,6 +122,24 @@
         }
     }
 
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
 
+    @keyframes slideDown {
+        from {
+            top: -1000px;
+            opacity: 0
+        }
+        to {
+            top: -325px;
+            opacity: 1
+        }
+    }
 
 }

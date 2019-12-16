@@ -29,7 +29,7 @@
                     <label for="password-id">Password</label>
                     <input type="password" class="form-control" id="password-id" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary" id="login-button">Login</button>
+                <button type="button" class="btn btn-primary" id="login-button">Login</button>
             </form>
         </div>
         <div class="mascot-container mb-3">
@@ -39,15 +39,13 @@
 
     <div class="container" id="login-page-footer-container">
         <div class="container" id="login-page-nav-container">
-            <a class="nav-link account-links p-0" href="#">Create a new account</a>
+            <a class="nav-link account-links p-0" href="#" id="create-account-link">Create a new account</a>
             <a class="nav-link account-links p-0" href="#">I forgot my username</a>
             <a class="nav-link account-links p-0" href="#">I forgot my password</a>
         </div>
     </div>
 </div>
 <!--End of login page section-->
-
-
 
 <!--Home Page container-->
 <div class="container my-4" id="home-page">
@@ -56,6 +54,49 @@
         <h4 class="sub-header">Choose an option below</h4>
     </div>
 </div>
+<!--End of Home Page container-->
+
+<!--Start of account creation modal-->
+<div class="container d-flex flex-column align-items-center close-modal" id="account-creation-container">
+    <div class="container text-center" id="account-creation-heading-container">
+        <h1 class="main-header">Account Creation</h1>
+    </div>
+    <div class="container" id="account-creation-body-container">
+        <div class="input-group my-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Name</span>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1" id="account-creation-name">
+        </div>
+
+        <div class="input-group my-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon2">Email</span>
+            </div>
+            <input type="email" class="form-control" placeholder="Enter email..." aria-label="Email" aria-describedby="basic-addon2" id="account-creation-email">
+        </div>
+
+        <div class="input-group my-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Username</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Enter username..." aria-label="Username" aria-describedby="basic-addon3" id="account-creation-username">
+        </div>
+
+        <div class="input-group my-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon4">Password</span>
+            </div>
+            <input type="password" class="form-control" placeholder="Enter password..." aria-label="Password" aria-describedby="basic-addon4" id="account-creation-password">
+        </div>
+        <div class="container d-flex justify-content-center my-3">
+            <button type="button" class="btn btn-primary mx-2" id="account-creation-button">Create Account</button>
+            <button type="button" class="btn btn-primary mx-2" id="account-creation-cancel-button">Cancel</button>
+        </div>
+    </div>
+</div>
+<!--End of account creation modal-->
+
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -68,5 +109,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="js/app.js"></script>
+<script src="js/local_storage.js"></script>
 </body>
 </html>
