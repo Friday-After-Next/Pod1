@@ -8,8 +8,9 @@
     const adminAccount = {
         username: "admin",
         password: "password"
-    }
+    };
     window.localStorage.setItem("admin", JSON.stringify(adminAccount));
+
 
 
 
