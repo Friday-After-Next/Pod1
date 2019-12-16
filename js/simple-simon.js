@@ -88,7 +88,7 @@ $("#mode").addEventListener("click", function(){
         case false:
             strict = true;
             lastChance = false;
-            $("#mode").hetml("Mode: Strict");
+            $("#mode").html("Mode: Strict");
             break;
     }
 });

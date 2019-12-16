@@ -1,3 +1,22 @@
+.body{
+    background-color: #EFDECF;
+}
+.home-button{
+    font-size: 2rem;
+    color: white;
+    background-color: #9b2943;
+}
+.back-game-button{
+    font-size: 2rem;
+    color: white;
+    background-color: #9b2943;
+}
+.box{
+    margin: 0 auto;
+    width: 45px;
+    border: 1px solid black;
+    text-align: center;
+}
 #container{
     width: 160px;
     height: 160px;
@@ -50,13 +69,20 @@
 #blue:active{
     background-color: lightblue;
 }
-.box{
-    margin: 0 auto;
-    width: 45px;
-    border: 1px solid black;
-    text-align: center;
-}
 #start:hover{
     cursor: pointer;
 }
-#show-rounds{}
+#show-rounds{
+
+}
+#game-heading{
+    font-size: 100px;
+    text-align: center;
+    color: #00AA51;
+}
+#game-name{
+    color: #00aa51;
+}
+#mascot{
+    margin-top: 180px;
+}
