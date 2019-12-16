@@ -76,17 +76,6 @@ function TicTacToeGame() {
                         resetBoard();
 
                     },delay);
-                    // winningCombo.forEach((index) => {
-                    //     positions[index].className += " winner";
-                    //     console.log("you won");
-                    //     turn = 0;
-                    //     alert("Winner!");
-                    //     var delay = 3000;
-                    //     var timeoutID = setTimeout(function(){
-                    //         resetBoard();
-                    //
-                    //     },delay);
-                    // })
                 }
             });
             return winner;
@@ -110,8 +99,6 @@ function TicTacToeGame() {
     }
 
     function ComputerPlayer(board) {
-
-
         this.takeTurn = function () {
             const availablePositions = board.position.filter((p) => p.innerText === "");
             const move = Math.floor(Math.random() * availablePositions.length);
@@ -131,5 +118,15 @@ function TicTacToeGame() {
         // }
 
     }
+    var backButton = document.getElementById("back-button");
+    backButton.addEventListener("click", function(){
+        alert("button was clicked")
+
+    });
+    var homeButton = document.getElementById("home-button");
+    homeButton.addEventListener("click", function(){
+        alert("button was clicked")
+
+    });
 }
 
