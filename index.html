@@ -40,8 +40,8 @@
     <div class="container" id="login-page-footer-container">
         <div class="container" id="login-page-nav-container">
             <a class="nav-link account-links p-0" href="#" id="create-account-link">Create a new account</a>
-            <a class="nav-link account-links p-0" href="#">I forgot my username</a>
-            <a class="nav-link account-links p-0" href="#">I forgot my password</a>
+            <a class="nav-link account-links p-0" href="#" id="forgot-account-link">I forgot my username</a>
+            <a class="nav-link account-links p-0" href="#" id="forgot-password-link">I forgot my password</a>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@
 <!--End of Home Page container-->
 
 <!--Start of account creation modal-->
-<div class="container d-flex flex-column align-items-center close-modal" id="account-creation-container">
+<div class="container d-flex flex-column align-items-center close-modal-account-creation" id="account-creation-container">
     <div class="container text-center" id="account-creation-heading-container">
         <h1 class="main-header">Account Creation</h1>
     </div>
@@ -96,6 +96,26 @@
     </div>
 </div>
 <!--End of account creation modal-->
+
+<!--Start of forgot account modal-->
+<div class="container d-flex flex-column align-items-center close-modal-forgot-account" id="forgot-account-container">
+    <div class="container" id="forgot-account-body-container">
+        <div class="container text-center" id="forgot-account-heading-container">
+            <h1 class="main-header">Forgot Account Username</h1>
+        </div>
+        <div class="input-group my-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon5">Enter your email</span>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon5" id="forgot-account-name">
+        </div>
+        <div class="container d-flex justify-content-center my-2">
+            <button type="button" class="btn btn-primary mx-2" id="forgot-account-button">Create Account</button>
+            <button type="button" class="btn btn-primary mx-2" id="forgot-account-cancel-button">Cancel</button>
+        </div>
+    </div>
+</div>
+<!--End of forgot account modal-->
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

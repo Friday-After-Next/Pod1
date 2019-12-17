@@ -67,17 +67,30 @@
         background-color: var(--hover-color);
     }
 
-    .close-modal {
+    .close-modal-account-creation {
         position: relative;
         top: -1000px;
         display: none;
     }
 
-    .open-modal {
+    .open-modal-account-creation {
         position: relative;
         top: -325px;
         display: block;
-        animation: 0.4s slideDown;
+        animation: 0.4s slideDownCreate;
+    }
+
+    .close-modal-forgot-account{
+        position: relative;
+        top: -1100px;
+        display: none;
+    }
+
+    .open-modal-forgot-account{
+        position: relative;
+        top: -650px;
+        display: block;
+        animation: 0.4s slideDownUsername;
     }
 
     #login-page {
@@ -113,6 +126,14 @@
         border: .2rem solid var(--secondary-theme-color);
     }
 
+    #forgot-account-body-container {
+        background-color: white;
+        border-radius: .8rem;
+        width: 90%;
+        height: 15rem;
+        border: .2rem solid var(--secondary-theme-color);
+    }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -122,13 +143,23 @@
         }
     }
 
-    @keyframes slideDown {
+    @keyframes slideDownCreate {
         from {
             top: -1000px;
             opacity: 0
         }
         to {
             top: -325px;
+            opacity: 1
+        }
+    }
+    @keyframes slideDownUsername {
+        from {
+            top: -1100px;
+            opacity: 0
+        }
+        to {
+            top: -650px;
             opacity: 1
         }
     }

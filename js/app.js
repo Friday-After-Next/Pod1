@@ -7,8 +7,13 @@
     let createAccountEl = document.getElementById("create-account-link");
     let accountCreationModalEl = document.getElementById("account-creation-container");
     let accountCreationButtonEl = document.getElementById("account-creation-button");
-    let accountCreationCancelButtonEl = document.getElementById("account-creation-cancel-button");
+    let forgotAccountLinkEl = document.getElementById("forgot-account-link");
+    let forgotAccountModalEl = document.getElementById("forgot-account-container");
 
+
+    let forgotPasswordLinkEl = document.getElementById("forgot-password-link");
+    let accountCreationCancelButtonEl = document.getElementById("account-creation-cancel-button");
+    let forgotAccountCancelButtonEl = document.getElementById("forgot-account-cancel-button");
 // Create admin username and password;
     let admin = {
         username: "admin",
@@ -18,8 +23,10 @@
     window.localStorage.setItem("adminAccount", JSON.stringify(admin)); // place adminAccount in local storage
 // Create blank user account
     let user = {
+        name: "",
         username: "",
         password: "",
+        email: "",
         balance: 0
     };
 
@@ -51,7 +58,7 @@
 // If create account link is clicked, display a modal that opens and allows user to create an account.
     let createAccountLinkClicked = function () {
         createAccountEl.addEventListener("click", function () {
-            modalTrigger();
+            createAccountModalTrigger();
         });
     };
 
@@ -65,10 +72,12 @@
             if (usernameInput === "admin") {
                 alert("Cannot use admin as username.");
             } else if (nameInput && emailInput && usernameInput && passwordInput) {
+                user.name = nameInput;
+                user.email = emailInput;
                 user.username = usernameInput;
                 user.password = passwordInput;
                 window.localStorage.setItem("user", JSON.stringify(user));
-                modalTrigger();
+                createAccountModalTrigger();
                 alert("Account created!");
             } else {
                 alert("Please enter all fields");
@@ -76,21 +85,38 @@
         });
     };
 
-
     let createAccountCancelButtonClicked = function () {
         accountCreationCancelButtonEl.addEventListener("click", function () {
-            modalTrigger();
+            createAccountModalTrigger();
         });
     };
 
-    function modalTrigger() {
-        accountCreationModalEl.classList.toggle("close-modal");
-        accountCreationModalEl.classList.toggle("open-modal");
+    let forgotAccountCancelButtonClicked = function() {
+        forgotAccountCancelButtonEl.addEventListener("click", function() {
+            forgotAccountModalTrigger();
+        });
+    }
+
+    let forgotAccountLinkClicked = function() {
+       forgotAccountLinkEl.addEventListener("click", function() {
+           forgotAccountModalTrigger();
+       });
     };
+
+    function createAccountModalTrigger() {
+        accountCreationModalEl.classList.toggle("close-modal-account-creation");
+        accountCreationModalEl.classList.toggle("open-modal-account-creation");
+    }
+
+    function forgotAccountModalTrigger() {
+        forgotAccountModalEl.classList.toggle("close-modal-forgot-account");
+        forgotAccountModalEl.classList.toggle("open-modal-forgot-account");
+    }
 
     loginButtonClicked();
     createAccountLinkClicked();
     createAccountButtonClicked();
     createAccountCancelButtonClicked();
-
+    forgotAccountLinkClicked();
+    forgotAccountCancelButtonClicked()
 })();
