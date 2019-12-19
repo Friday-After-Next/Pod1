@@ -52,6 +52,8 @@
     .account-links {
         font-size: .8rem;
         color: var(--nav-links-color);
+        background-color: var(--secondary-theme-color);
+        height: 2rem;
     }
 
     .account-links:hover {

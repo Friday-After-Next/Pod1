@@ -14,6 +14,8 @@
     let forgotAccountFindButtonEl = document.getElementById("forgot-account-find-button");
     let forgotPasswordLinkEl = document.getElementById("forgot-password-link");
     let forgotPasswordModelEl = document.getElementById("forgot-password-container");
+    let forgotPasswordFindButtonEl = document.getElementById("forgot-password-find-button");
+    let forgotPasswordCancelButtonEl = document.getElementById("forgot-password-cancel-button");
 
 
 // Create admin username and password;
@@ -145,6 +147,27 @@
         })
     };
 
+    // checks if email is listed and returns that an email was sent to recover password.
+    let forgotPasswordFindButtonClicked = function () {
+        forgotPasswordFindButtonEl.addEventListener("click", function() {
+            let emailInput = document.getElementById("forgot-password-username").value;
+            console.log(emailInput);
+            if (emailInput === "") {
+                alert("Please enter a valid email.");
+            } else if (emailInput === user.email) {
+                alert("Your password was emailed to you.");
+            } else {
+                alert("Incorrect email format or no user associated with email.")
+            }
+        })
+    }
+
+    let forgotPasswordCancelButtonClicked = function () {
+        forgotPasswordCancelButtonEl.addEventListener("click", function() {
+            forgotPasswordModalTrigger();
+        });
+    };
+
     // Toggles the modal open and close views
     function forgotPasswordModalTrigger() {
         forgotPasswordModelEl.classList.toggle("close-modal-forgot-password");
@@ -159,4 +182,6 @@
     forgotAccountFindButtonClicked();
     forgotAccountCancelButtonClicked();
     forgotPasswordLinkClicked();
+    forgotPasswordFindButtonClicked();
+    forgotPasswordCancelButtonClicked();
 })();
