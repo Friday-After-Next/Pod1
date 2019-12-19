@@ -93,6 +93,19 @@
         animation: 0.4s slideDownUsername;
     }
 
+    .close-modal-forgot-password {
+        position: relative;
+        top: -1300px;
+        display: none;
+    }
+
+    .open-modal-forgot-password {
+        position: relative;
+        top: -890px;
+        display: block;
+        animation: .4s slideDownPassword;
+    }
+
     #login-page {
         animation: fadeIn;
         animation-duration: 2s;
@@ -104,11 +117,7 @@
         display: none;
     }
 
-    #login-page-header-container {
-        text-align: center;
-    }
-
-    #home-page-header-container {
+    #login-page-header-container, #home-page-header-container  {
         text-align: center;
     }
 
@@ -126,7 +135,7 @@
         border: .2rem solid var(--secondary-theme-color);
     }
 
-    #forgot-account-body-container {
+    #forgot-account-body-container, #forgot-password-container {
         background-color: white;
         border-radius: .8rem;
         width: 90%;
@@ -160,6 +169,16 @@
         }
         to {
             top: -650px;
+            opacity: 1
+        }
+    }
+    @keyframes slideDownPassword {
+        from {
+            top: -1300px;
+            opacity: 0
+        }
+        to {
+            top: -890px;
             opacity: 1
         }
     }
