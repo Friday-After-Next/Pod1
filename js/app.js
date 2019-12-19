@@ -26,13 +26,14 @@
     };
     window.localStorage.setItem("adminAccount", JSON.stringify(admin)); // place adminAccount in local storage
 // Create blank user account
-    const user = {
+    let user = {
         name: "",
         username: "",
         password: "",
         email: "",
         balance: 0
     };
+    user = JSON.parse(window.localStorage.getItem("user"));
 
 // If login button is clicked & account login is valid, hide the login page and proceed to the home page
     function loginButtonClicked() {
@@ -84,7 +85,7 @@
                 user.password = passwordInput;
                 window.localStorage.setItem("user", JSON.stringify(user));
                 createAccountModalTrigger();
-                alert("Account created!");
+                alert("Account created. Please log in!");
             } else {
                 alert("Please enter all fields");
             }
@@ -151,11 +152,10 @@
     let forgotPasswordFindButtonClicked = function () {
         forgotPasswordFindButtonEl.addEventListener("click", function() {
             let emailInput = document.getElementById("forgot-password-username").value;
-            console.log(emailInput);
             if (emailInput === "") {
                 alert("Please enter a valid email.");
             } else if (emailInput === user.email) {
-                alert("Your password was emailed to you.");
+                alert("An email has been sent to for you to recover your password.");
             } else {
                 alert("Incorrect email format or no user associated with email.")
             }
