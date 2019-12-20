@@ -20,25 +20,33 @@
     </div>
 </div>
 
-<div class="container d-flex">
-    <div class="container d-flex flex-wrap" id="store-container">
-        <div class="container item-container">
-            <img class="item" src="./img/store-images/blocks.png" alt="">
-            <p>$4.00</p>
+<div class="container-fluid d-flex">
+
+    <div class="container-fluid d-flex flex-wrap overflow-auto mx-3 px-0" id="store-container">
+        <div class="container-fluid text-center px-0" id="store-heading-container">
+            <h2>Choose something to buy!</h2>
+            <small>But remember you must have enough money!</small>
         </div>
-        <div class="container item-container">
-            <img class="item" src="./img/store-images/batman.png" alt="">
-            <p>$4.00</p>
+        <div class="container d-flex flex-wrap justify-content-center overflow-auto mx-3" id="store-items-container">
+
         </div>
-        <div class="container item-container">
-            <img class="item" src="./img/store-images/spiderman.png" alt="">
-        </div>
-        <div class="container item-container"><img class="item" src="./img/store-images/captain-america-shield.png" alt=""></div>
     </div>
 
-    <div class="mascot-container mb-3">
-        <img src="img/pigglesworth.png" class="img-fluid" alt="Responsive image" id="mascot-img">
+    <div class="container d-flex flex-column justify-content-center text-center">
+        <div class="mascot-container my-4">
+            <img src="img/pigglesworth.png" class="img-fluid" alt="Responsive image" id="mascot-img">
+        </div>
+        <div class="container shop-btn my-4" id="add-item-btn">
+            +
+        </div>
+        <div class="container shop-btn my-1" id="remove-item-btn">
+            -
+        </div>
+        <div class="container shop-btn my-4" id="checkout-btn">
+            Checkout
+        </div>
     </div>
+
 </div>
 
 

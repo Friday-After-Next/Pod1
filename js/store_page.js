@@ -1,9 +1,14 @@
 (function () {
     "use strict";
 
-    let storeContainerEl = document.getElementById("store-container");
+    let storeContainerEl = document.getElementById("store-items-container");
+    let itemContainersEl = document.getElementsByClassName("item-container");
+    let itemsEl = document.getElementsByClassName("item");
+    let selectedItem;
 
-    var items = [
+    // console.log(itemContainersEl);
+
+    let items = [
         {id: 0, name: 'Blocks', price: 1, imgURL: './img/store-images/blocks.png'},
         {id: 1, name: 'Batman Figurine', price: 1, imgURL: './img/store-images/batman.png'},
         {id: 2, name: 'Spiderman Figurine', price: 1, imgURL: './img/store-images/spiderman.png'},
@@ -39,13 +44,68 @@
         {id: 32, name: 'Telescope', price: 1, imgURL: './img/store-images/telescope.png'},
         {id: 33, name: 'Makeup Kit', price: 1, imgURL: './img/store-images/makeup-kit.png'},
         {id: 34, name: 'Vanity Mirror', price: 1, imgURL: './img/store-images/vanity-mirror.png'},
-        {id: 35, name: 'Skates', price: 1, imgURL: './img/store-images/skates.png'},
+        {id: 35, name: 'Skates', price: 1, imgURL: './img/store-images/skate.png'},
         {id: 36, name: 'Tiara', price: 1, imgURL: './img/store-images/tiara.png'},
         {id: 37, name: 'Bat', price: 1, imgURL: './img/store-images/bat.png'},
     ];
 
-    storeContainerEl.innerHTML = "<img class='item' src='" + items[0].imgURL + "'>";
+    // A cart to store items to purchase
+    let cart = [];
+
+    // storeContainerEl.innerHTML = "<img class='item' src='" + items[0].imgURL + "'>";
 
 
+    let displayShopItems = function (itemsArray) {
+        let htmlString = "";
+        itemsArray.forEach((item) => {
+            htmlString += `<div class="d-flex flex-column item-container align-items-center justify-content-between text-center my-1 mx-1"><p class="my-2">${item.name}</p>
+            <img class="item" src="${item.imgURL}" alt="">
+            <p class="my-2">Cost: $${item.price}.00</p>
+        </div>`
+        });
+        storeContainerEl.innerHTML = htmlString;
+    };
 
-})();
+    let itemClicked = function () {
+            for (let i = 0; i < itemContainersEl.length; i++) {
+                itemContainersEl[i].addEventListener("click", function () {
+                        if (itemContainersEl[i].classList.contains("item-container-active")) {
+                            selectedItem = "";
+                            itemContainersEl[i].classList.toggle("item-container-active");
+                        } else {
+                            removeAllSelection();
+                            itemContainersEl[i].classList.toggle("item-container-active");
+                        }
+                        // loop through the items array to see if the imgURL matches the clicked item
+                        items.forEach(function (item, id) {
+                            // set the clicked item when user clicks the item container
+                            let clickedItem = itemContainersEl[i].getElementsByClassName("item")[0];
+                            if (item.imgURL === clickedItem.getAttribute("src")) {
+                                selectedItem = items[id];
+                                console.log(selectedItem);
+                            }
+                        });
+                    }
+                );
+            }
+        };
+    /*    let mouseOver = function() {
+            for (let i = 0; i < itemContainersEl.length; i++) {
+                itemContainersEl[i].addEventListener("mouseover", function() {
+                    console.log("hello");
+                });
+            };
+        };*/
+
+    let removeAllSelection = function () {
+        for (let i = 0; i < itemContainersEl.length; i++) {
+            itemContainersEl[i].classList.remove("item-container-active");
+        }
+    };
+    displayShopItems(items);
+    itemClicked();
+// mouseOver();
+
+
+})
+();
