@@ -1,6 +1,46 @@
 (function () {
     "use strict";
 
+    var items = [
+        {id: 0, name: 'Blocks', price: 1},
+        {id: 1, name: 'Batman Figurine', price: 1},
+        {id: 2, name: 'Spiderman Figurine', price: 1},
+        {id: 3, name: "Captain America's Shield", price: 1},
+        {id: 4, name: 'Superman', price: 1},
+        {id: 5, name: 'Stuffed Animal', price: 1},
+        {id: 6, name: 'Stuffed Panda', price: 1},
+        {id: 7, name: 'Yo-yo', price: 1},
+        {id: 8, name: 'Basketball', price: 1},
+        {id: 9, name: 'Soccer Ball', price: 1},
+        {id: 10, name: 'Green Doll', price: 1},
+        {id: 11, name: 'Pink Doll', price: 1},
+        {id: 12, name: 'Car', price: 1},
+        {id: 13, name: 'Blue Helmet', price: 1},
+        {id: 14, name: 'Pink Helmet', price: 1},
+        {id: 15, name: 'Bike', price: 1},
+        {id: 16, name: 'Baseball Ball', price: 1},
+        {id: 17, name: 'Dog', price: 1},
+        {id: 18, name: 'Cat', price: 1},
+        {id: 19, name: 'Brown Dog', price: 1},
+        {id: 20, name: 'Turtle', price: 1},
+        {id: 21, name: 'Rabbit', price: 1},
+        {id: 22, name: 'Kitten', price: 1},
+        {id: 23, name: 'Dolls House', price: 1},
+        {id: 24, name: 'Duck', price: 1},
+        {id: 25, name: 'Motorcycle', price: 1},
+        {id: 26, name: 'Pink Sunglasses', price: 1},
+        {id: 27, name: 'Black Sunglasses', price: 1},
+        {id: 28, name: 'Xbox', price: 1},
+        {id: 29, name: 'Playstation 4', price: 1},
+        {id: 30, name: 'Nintendo Switch', price: 1},
+        {id: 31, name: 'Laptop', price: 1},
+        {id: 32, name: 'Telescope', price: 1},
+        {id: 33, name: 'Makeup Kit', price: 1},
+        {id: 34, name: 'Vanity Mirror', price: 1},
+        {id: 35, name: 'Skates', price: 1},
+        {id: 36, name: 'Tiara', price: 1},
+        {id: 37, name: 'Bat', price: 1},
+    ];
 
 
 })();

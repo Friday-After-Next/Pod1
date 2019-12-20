@@ -49,5 +49,10 @@
         font-family: var(--main-text-font);
     }
 
+    #mascot-img {
+        /*Maybe change to dynamic size later*/
+/*        height: 165px;
+        width: 240px;*/
+    }
 
 }
