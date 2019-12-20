@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Roboto&display=swap');
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+    :root {
+        --main-text-font: 'Bubblegum Sans', cursive;
+        --secondary-text-font: 'Roboto', sans-serif;
+
+        /*        !*First Palette*!
+                --main-theme-color: #78ae31;
+                --secondary-theme-color: #e246a5;
+                --btn-hover-color: #7f1bc3;
+                --main-font-color: #fff;*/
+
+        /*        !*Second Palette*!
+                --main-theme-color: #007d6b;
+                --secondary-theme-color: #f96171;
+                --main-font-color: #c9f45f;
+                --nav-links-color: #fff;
+                --hover-color: #bf0012;*/
+
+        /*Third Palette*/
+        --main-theme-color: #84253e;
+        --secondary-theme-color: #a6cc13;
+        --main-font-color: #a6cc13;
+        --nav-links-color: #fff;
+        --hover-color: #cfe27d;
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--secondary-text-font);
+    }
+
+    body {
+        max-width: 1024px;
+        background-color: var(--main-theme-color);
+        color: var(--main-font-color);
+    }
+
+    small {
+        color: red;
+    }
+
+    .main-header {
+        font-family: var(--main-text-font);
+        font-size: 3rem;
+    }
+
+    .sub-header {
+        font-family: var(--main-text-font);
+    }
+
+    .item {
+        width: 60px;
+
+    }
+
+    .item-container {
+        width: 45%;
+        border: 2px solid black;
+        border-radius: .4em;
+    }
+
+    .item-container-active {
+        background-color: var(--main-theme-color);
+        animation: .4s fadeIn;
+    }
+
+    .shop-btn {
+        background-color: beige;
+        color: var(--secondary-theme-color);
+        font-size: 1.2em;
+        border-radius: .4em;
+        border: 2px solid black;
+    }
+
+    .shop-btn:active {
+        background-color: var(--main-theme-color);
+        animation: .4s fadeIn;
+    }
+
+    #store-container {
+        min-width: 70%;
+        max-height: 400px;
+        background-color: beige;
+        border-radius: .4em;
+        border: 2px solid var(--secondary-theme-color);
+    }
+
+    #store-heading-container {
+        background-color: var(--main-theme-color);
+        max-width: 100%;
+    }
+
+    #store-items-container {
+
+    }
+
+    #mascot-img {
+        /*Maybe change to dynamic size later*/
+        /*        height: 165px;
+                width: 240px;*/
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+}
+
+
