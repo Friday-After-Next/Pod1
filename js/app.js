@@ -1,6 +1,7 @@
 (function () {
     "use strict";
 // Enter code here inside of IIFE
+    let bodyEl = document.querySelector("#custom-body");
     let loginPageEl = document.getElementById("login-page");
     let homePageEl = document.getElementById("home-page");
     let loginButtonEl = document.getElementById("login-button");
@@ -16,8 +17,7 @@
     let forgotPasswordModelEl = document.getElementById("forgot-password-container");
     let forgotPasswordFindButtonEl = document.getElementById("forgot-password-find-button");
     let forgotPasswordCancelButtonEl = document.getElementById("forgot-password-cancel-button");
-
-
+    
 // Create admin username and password;
     const admin = {
         username: "admin",
@@ -90,6 +90,12 @@
                 alert("Please enter all fields");
             }
         });
+        window.addEventListener("click", function (e) {
+            if (e.target === bodyEl) {
+                accountCreationModalEl.classList.add("close-modal-account-creation");
+                accountCreationModalEl.classList.remove("open-modal-account-creation");
+            }
+        });
     };
 
     // Will close the modal if cancel is clicked
@@ -110,18 +116,22 @@
         forgotAccountLinkEl.addEventListener("click", function () {
             forgotAccountModalTrigger();
         });
-        // window.addEventListener("click",function(e) {
-        //     console.log(e);
-        // });
+        window.addEventListener("click", function (e) {
+            if (e.target === bodyEl) {
+                forgotAccountModalEl.classList.add("close-modal-forgot-account");
+                forgotAccountModalEl.classList.remove("open-modal-forgot-account");
+            }
+        });
     };
 
-    let forgotAccountFindButtonClicked = function() {
-        forgotAccountFindButtonEl.addEventListener("click", function (){
+    let forgotAccountFindButtonClicked = function () {
+        forgotAccountFindButtonEl.addEventListener("click", function () {
             let emailInput = document.getElementById("forgot-account-username").value;
             console.log(emailInput);
             if (emailInput === "") {
                 alert("Please enter a valid email.");
             } else if (emailInput === user.email) {
+                forgotAccountModalTrigger();
                 alert("Your username: " + user.username);
             } else {
                 alert("Incorrect email format or no user associated with email.")
@@ -143,18 +153,25 @@
     }
 
     let forgotPasswordLinkClicked = function () {
-        forgotPasswordLinkEl.addEventListener("click", function() {
+        forgotPasswordLinkEl.addEventListener("click", function () {
             forgotPasswordModalTrigger();
         })
+        window.addEventListener("click", function (e) {
+            if (e.target === bodyEl) {
+                forgotPasswordModelEl.classList.add("close-modal-forgot-password");
+                forgotPasswordModelEl.classList.remove("open-modal-forgot-password");
+            }
+        });
     };
 
     // checks if email is listed and returns that an email was sent to recover password.
     let forgotPasswordFindButtonClicked = function () {
-        forgotPasswordFindButtonEl.addEventListener("click", function() {
+        forgotPasswordFindButtonEl.addEventListener("click", function () {
             let emailInput = document.getElementById("forgot-password-username").value;
             if (emailInput === "") {
                 alert("Please enter a valid email.");
             } else if (emailInput === user.email) {
+                forgotPasswordModalTrigger();
                 alert("An email has been sent to for you to recover your password.");
             } else {
                 alert("Incorrect email format or no user associated with email.")
@@ -163,7 +180,7 @@
     }
 
     let forgotPasswordCancelButtonClicked = function () {
-        forgotPasswordCancelButtonEl.addEventListener("click", function() {
+        forgotPasswordCancelButtonEl.addEventListener("click", function () {
             forgotPasswordModalTrigger();
         });
     };
