@@ -49,6 +49,16 @@
         font-family: var(--main-text-font);
     }
 
+    .item {
+        height: 40px;
+
+    }
+
+    #store-container {
+        min-width: 70%;
+        background-color: beige;
+    }
+
     #mascot-img {
         /*Maybe change to dynamic size later*/
 /*        height: 165px;
