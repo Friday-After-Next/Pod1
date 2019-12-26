@@ -3,8 +3,14 @@
 
     let storeContainerEl = document.getElementById("store-items-container");
     let itemContainersEl = document.getElementsByClassName("item-container");
+    let cartContainerEl = document.getElementById("cart-container");
+    let cartItemsContainerEl = document.getElementById("cart-items-container");
+    let cartItemContainerEl = document.getElementsByClassName("cart-item-container");
     let itemsEl = document.getElementsByClassName("item");
-    let selectedItem;
+    let itemAddBtnEl = document.getElementById("add-item-btn");
+    let cartBtnEl = document.getElementById("cart-btn");
+    let selectedItem = null;
+
 
     // console.log(itemContainersEl);
 
@@ -66,29 +72,99 @@
         storeContainerEl.innerHTML = htmlString;
     };
 
+    let displayCartItems = function (cartArray) {
+        let htmlString = "";
+        cartArray.forEach((item) => {
+            htmlString += `<div class="d-flex flex-column cart-item-container align-items-center justify-content-between text-center my-1 mx-1"><p class="my-2">${item.name}</p>
+            <img class="item" src="${item.imgURL}" alt="">
+            <p class="my-2">Cost: $${item.price}.00</p>
+        </div>`
+        });
+        cartItemsContainerEl.innerHTML = htmlString;
+    };
+
     let itemClicked = function () {
-            for (let i = 0; i < itemContainersEl.length; i++) {
-                itemContainersEl[i].addEventListener("click", function () {
-                        if (itemContainersEl[i].classList.contains("item-container-active")) {
-                            selectedItem = "";
-                            itemContainersEl[i].classList.toggle("item-container-active");
-                        } else {
-                            removeAllSelection();
-                            itemContainersEl[i].classList.toggle("item-container-active");
+        for (let i = 0; i < itemContainersEl.length; i++) {
+            itemContainersEl[i].addEventListener("click", function () {
+                    // Loop through the items array to see if the imgURL matches the clicked item
+                    // If it matches, then set it as the selected item
+                    let clickedItem = itemContainersEl[i].getElementsByClassName("item")[0];
+                    items.forEach(function (item, id) {
+                        // Set the clicked item when user clicks the item container
+                        if (item.imgURL === clickedItem.getAttribute("src")) {
+                            selectedItem = items[id];
                         }
-                        // loop through the items array to see if the imgURL matches the clicked item
-                        items.forEach(function (item, id) {
-                            // set the clicked item when user clicks the item container
-                            let clickedItem = itemContainersEl[i].getElementsByClassName("item")[0];
-                            if (item.imgURL === clickedItem.getAttribute("src")) {
-                                selectedItem = items[id];
-                                console.log(selectedItem);
-                            }
-                        });
+                    });
+
+                // At each iteration, check to see if there is already an active container and only allow 1 active container.
+                    if (itemContainersEl[i].classList.contains("item-container-active")) {
+                        itemContainersEl[i].classList.toggle("item-container-active");
+                        // Sets selectedItem as null because it was unselected.
+                        selectedItem = null;
+                    } else {
+                        removeAllSelection();
+                        itemContainersEl[i].classList.toggle("item-container-active");
                     }
-                );
-            }
-        };
+                }
+            );
+        }
+    };
+
+    let cartItemClicked = function () {
+        for (let i = 0; i < cartItemContainerEl.length; i++) {
+            console.log(cartItemContainerEl[i]);
+            cartItemContainerEl[i].addEventListener("click", function () {
+                console.log("hello");
+                    // Loop through the items array to see if the imgURL matches the clicked item
+                    // If it matches, then set it as the selected item
+                    let clickedItem = cartItemContainerEl[i].getElementsByClassName("item")[0];
+                    items.forEach(function (item, id) {
+                        // Set the clicked item when user clicks the item container
+                        if (item.imgURL === clickedItem.getAttribute("src")) {
+                            selectedItem = items[id];
+                        }
+                    });
+
+                // At each iteration, check to see if there is already an active container and only allow 1 active container.
+                    if (cartItemContainerEl[i].classList.contains("cart-item-container-active")) {
+                        cartItemContainerEl[i].classList.toggle("cart-item-container-active");
+                        // Sets selectedItem as null because it was unselected.
+                        selectedItem = null;
+                    } else {
+                        // removeAllSelection();
+                        cartItemContainerEl[i].classList.toggle("cart-item-container-active");
+                    }
+                }
+            );
+        }
+    };
+
+    // let addButtonClicked = function () {
+    itemAddBtnEl.addEventListener("click", function () {
+        if (selectedItem === null) {
+            // console.log(selectedItem);
+            alert("Please select an item to add to the cart!");
+        } else {
+            // console.log(selectedItem);
+            cart.push(selectedItem);
+            displayCartItems(cart);
+        }
+    });
+    // };
+
+    let cartBtnClicked = function () {
+        cartBtnEl.addEventListener("click", function () {
+            cartItemClicked();
+            displayCartItems(cart);
+            cartModalTrigger();
+        })
+    };
+
+    let cartModalTrigger = function() {
+        cartContainerEl.classList.toggle("open-cart-modal");
+        cartContainerEl.classList.toggle("close-cart-modal");
+    };
+
     /*    let mouseOver = function() {
             for (let i = 0; i < itemContainersEl.length; i++) {
                 itemContainersEl[i].addEventListener("mouseover", function() {
@@ -104,6 +180,9 @@
     };
     displayShopItems(items);
     itemClicked();
+    cartItemClicked();
+    cartBtnClicked();
+    // addButtonClicked();
 // mouseOver();
 
 
