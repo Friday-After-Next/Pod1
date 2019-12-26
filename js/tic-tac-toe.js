@@ -7,6 +7,7 @@ function TicTacToeGame() {
     const humanPlayer = new HumanPlayer(board);
     const computerPlayer = new ComputerPlayer(board);
     let turn = 0;
+    let playerTurn = true;
 
 
     this.start = function () {
@@ -23,8 +24,10 @@ function TicTacToeGame() {
         }
         if (turn % 2 === 0) {
             humanPlayer.takeTurn();
+            playerTurn = false;
         } else {
             computerPlayer.takeTurn();
+            playerTurn = true;
         }
 
         turn++;
@@ -33,11 +36,6 @@ function TicTacToeGame() {
 
     function Board() {
         this.position = Array.from(document.querySelectorAll(".col"));
-
-        //0 1 2
-        //3 4 5
-        //6 7 8
-
         this.checkForWinner = function () {
             let winner = false;
             const winningCombinations = [
@@ -71,7 +69,12 @@ function TicTacToeGame() {
                             positions[index].className += " winner";
                     });
                     var timeoutID = setTimeout(function(){
-                        alert("Winner!");
+
+                        if (playerTurn === false) {
+                            alert("Winner!");
+                        } else {
+                            alert("You lost!");
+                        }
 
                         resetBoard();
 
