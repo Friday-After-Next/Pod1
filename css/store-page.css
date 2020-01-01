@@ -155,6 +155,10 @@
                 width: 240px;*/
     }
 
+    #checkout-btn {
+        display: none;
+    }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
