@@ -9,7 +9,7 @@ function randomWord() {
     answer =  wordBank[Math.floor(Math.random() * wordBank.length)];
 }
 
-//generate buttons
+//generate letter buttons
 function generateButtons() {
     let buttonsHTML = "abcdefghijklmnopqrstuvwxyz".split("").map(letter => `<button class="btn btn-lrg btn-primary m-2" 
 id='` + letter + `' 
@@ -43,6 +43,7 @@ function checkIfGameWon() {
 //Check if Game Lost
 function checkIfGameLost() {
     if(mistakes === maxWrong){
+        document.getElementById("wordSpotLight").innerHTML = "The answer was: " + answer;
         document.getElementById("keyboard").innerHTML = "You Lost!";
     }
 }
