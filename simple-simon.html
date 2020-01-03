@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/simple-simon.css">
 </head>
-<body>
-<div id="container">
+<body id="main-body">
+<div class="container-fluid d-flex align-item-center" id="main-heading-container">
+    <div class="container d-flex justify-content-start" id="back-to-games-container">
+        <button type="button" id="back-button" class="border rounded h-25 text-nowrap mr-5 back-game-button">Back to Games</button>
+    </div>
+    <div>
+        <h4 class="main-header" id="game-heading">Games</h4>
+    </div>
+    <div class="container d-flex justify-content-end" id="home-button-container">
+        <button type="button" id="home-button" class=" border rounded h-25 home-button">Home</button>
+    </div>
+</div>
+<div id="square-container">
     <div class="button" id="green"></div>
     <div class="button" id="red"></div>
     <div class="button" id="yellow"></div>
     <div class="button" id="blue"></div>
 </div>
-<div class="box">0</div>
-<div class="box" id="mode">Mode: Strict</div>
-<div class="box" id="start">Start</div>
+<div id="mode-container">
+    <div class="box">0</div>
+    <div class="box" id="mode">Mode: Strict</div>
+    <div class="box" id="start">Start</div>
+</div>
+<img src="Img/pigglesworth.png" class="picture img-fluid float-right" id="mascot" alt="Responsive image"
+     style="width: 30%;">
 
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/simple-simon.js"></script>
 </body>
 </html>

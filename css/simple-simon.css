@@ -1,6 +1,6 @@
-.body{
-    background-color: #EFDECF;
-}
+/*.body{*/
+/*    background-color: #EFDECF;*/
+/*}*/
 .home-button{
     font-size: 2rem;
     color: white;
@@ -17,9 +17,10 @@
     border: 1px solid black;
     text-align: center;
 }
-#container{
+
+#square-container{
     width: 160px;
-    height: 160px;
+    height: 180px;
     margin: 0 auto;
     text-align: center;
 }
@@ -79,10 +80,21 @@
     font-size: 100px;
     text-align: center;
     color: #00AA51;
+    margin-bottom: 5rem;
 }
 #game-name{
     color: #00aa51;
 }
 #mascot{
     margin-top: 180px;
+}
+#main-body{
+    background-color: #efdecf;
+    animation: fadeIn;
+}
+#home-button-container{
+
+}
+.picture{
+    margin-bottom: 5rem;
 }

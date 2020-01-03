@@ -6,7 +6,7 @@ let guessed = [];
 let wordStatus = null;
 
 function randomWord() {
-    answer =  wordBank[Math.floor(Math.random() * wordBank.length)];
+[;'']    answer =  wordBank[Math.floor(Math.random() * wordBank.length)];
 }
 
 //generate letter buttons
