@@ -3,25 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>HangMan</title>
-    <style>
-        .wrong-guess{
-            border-bottom: 2em;
-        }
-        .guess-word{
-            border-top: 5rem;
-        }
-    </style>
+    <title></title>
 </head>
 <body>
 <div class="container">
-    <h1 class="">Guess the Word!</h1>
-    <div class="wrong-guess">Wrong Guesses: <span id = "mistakes">0</span> of <span id="maxWrong"></span></div>
-    <div class="">
-
-        <p class="guess-word">Guess the Word:</p>
-        <p id="WordSpotLight">The word to be guessed goes here</p>
+    <h1 class="text-center">Guess the Word!</h1>
+    <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
+    <div class="text-center">
+        <p>Guess the Word:</p>
+        <p id="wordSpotLigth">The word to be guessed goes here</p>
         <div id="keyboard"></div>
         <button class="btn btn-info" onClick="reset()">Reset</button>
     </div>
