@@ -85,16 +85,10 @@
 #game-name{
     color: #00aa51;
 }
-#mascot{
-    margin-top: 180px;
-}
 #main-body{
     background-color: #efdecf;
     animation: fadeIn;
 }
 #home-button-container{
 
-}
-.picture{
-    margin-bottom: 5rem;
 }

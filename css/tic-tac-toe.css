@@ -5,10 +5,10 @@
     box-sizing: border-box;
 
 }
-h1{
-    text-align: left;
-    font-size: 50px;
-}
+/*h1{*/
+/*    text-align: left;*/
+/*    font-size: 50px;*/
+/*}*/
 #title{
     color: #A5CC11;
 }
@@ -38,12 +38,10 @@ h1{
 
 }
 .home-button{
-    font-size: 2rem;
     color: white;
     background-color: #9b2943;
 }
 .back-game-button{
-    font-size: 2rem;
     color: white;
     background-color: #9b2943;
 }
@@ -59,9 +57,4 @@ h1{
     margin-top: 290px;
 }
 
-/*.zero {*/
-/*    background-color: green;*/
-/*}*/
-/*.ab {*/
-/*    background-color: red;*/
-/*}*/
+

@@ -1,4 +1,4 @@
-let wordBank = ["finances", "money", "bank", "withdrawal", "deposit", "chores"];
+let wordBank = ["finances", "money", "bank", "withdrawal", "deposit", "chores", "debit", "credit"];
 let answer = "";
 let maxWrong = 6;
 let mistakes = 0;

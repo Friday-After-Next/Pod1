@@ -4,18 +4,67 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title></title>
+    <style>
+        .body{
+            background-color: #EFDECF;
+        }
+        .main-header{
+            color: #00AA51;
+        }
+        #keyboard{
+            border-top: 5rem;
+        }
+        #back-button{
+            color: white;
+            background-color: #9b2943;
+        }
+        #home-button{
+            color: white;
+            background-color: #9b2943;
+        }
+
+
+
+
+
+    </style>
 </head>
-<body>
-<div class="container">
-    <h1 class="text-center">Guess the Word!</h1>
-    <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
-    <div class="text-center">
-        <p>Guess the Word:</p>
-        <p id="wordSpotLigth">The word to be guessed goes here</p>
-        <div id="keyboard"></div>
-        <button class="btn btn-info" onClick="reset()">Reset</button>
+<body class="body">
+<div class="container-fluid d-flex align-item-center" id="main-heading-container">
+    <div class="container d-flex justify-content-start" id="back-to-games-container">
+        <button type="button" id="back-button" class="border rounded h-55 text-nowrap mr-5 back-game-button">Back to Games</button>
+    </div>
+    <div class="container mr-5" id="game-heading-container">
+        <h4 class="main-header" id="game-heading">Guess the Word!</h4>
+    </div>
+    <div class="container d-flex justify-content-end" id="home-button-container">
+        <button type="button" id="home-button" class=" border rounded h-55 home-button">Home</button>
     </div>
 </div>
+<!--<div class="container">-->
+<!--    <div class="container d-flex justify-content-start">-->
+<!--        <button type="button" id="back-button" class="border rounded h-50 text-nowrap mr-5 back-game-button">Back to Games</button>-->
+<!--    </div>-->
+<!--    <h1 class="game-header text-center">Guess the Word!</h1>-->
+<!--    <div class="container d-flex justify-content-end">-->
+<!--        <button type="button" id="home-button" class=" border rounded h-50 home-button">Home</button>-->
+<!--    </div>-->
+<!--</div>-->
+    <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
+    <div class="text-center">
+<!--        <p>Guess the Word:</p>-->
+        <p id="wordSpotLight">The word to be guessed goes here</p>
+        <div id="keyboard"></div>
+        <button class="btn btn-info" onClick="reset()">Reset</button>
+
+        <div class="container  mt-5" id="image">
+            <div class="col-12">
+                <img src="img/pigglesworth.png" class="img-fluid float-right" id="mascot" alt="Responsive image"
+                     style="width: 30%;" data-container="body" data-toggle="popover"
+                     data-placement="left" data-content="Lets make money!!!">
+            </div>
+        </div>
+
 
 
 
