@@ -12,8 +12,9 @@ var addColor = function(arr){
 var flashLights = function (arr) {
     var i = 0;
     var interval = setInterval(function(){
-        $("#" + arr[i]).fadeTo("slow", 0).fadeTo("slow", 1);
-        $("#sound-" + arr[i]) [0].play();
+        $("#" + arr[i]).fadeOut(800).fadeIn(800);
+        // console.log(arr[i]);
+        // $("#sound-" + arr[i]) [0].play();
         i++;
         if( i >= arr.length){
             clearInterval(interval);
@@ -51,9 +52,9 @@ var playerTurn = function () {
     updateRounds();
     addColor(computerMovements);
     flashLights(computerMovements);
-    $(".button").off("click").onactivate("click", function () {
-        $("#sound-" + $(this).attributes("id"))[0].play();
-        answers.push($(this).attributes("id"));
+    $(".button").on("click", function () {
+        // $("#sound-" + $(this).attributes("id"))[0].play();
+        answers.push($(this).attr("id"));
 
         for (var i = 0; i < answers.length; i++) {
             //correct answer
@@ -77,7 +78,7 @@ var playerTurn = function () {
         }
     });
 };
-$("#mode").addEventListener("click", function(){
+$("#mode").on("click", function(){
     switch (strict){
         case true:
         strict = false;
@@ -93,7 +94,7 @@ $("#mode").addEventListener("click", function(){
     }
 });
 
-$("#start").addEventListener("click", function(){
+$("#start").on("click", function(){
     playerTurn();
 });
 

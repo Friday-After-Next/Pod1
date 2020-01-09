@@ -19,6 +19,17 @@ onClick = "handleGuess('` + letter + `')">
 </button>
 `).join("");
 document.getElementById("keyboard").innerHTML = buttonsHTML;
+    var backButton = document.getElementById("back-button");
+    backButton.addEventListener("click", function(){
+        alert("button was clicked")
+    });
+    var homeButton = document.getElementById("home-button");
+    homeButton.addEventListener("click", function(){
+        alert("button was clicked")
+
+    });
+
+
 }
 function handleGuess(chosenLetter) {
     guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
@@ -68,6 +79,8 @@ function reset(){
     generateButtons();
 }
 document.getElementById("maxWrong").innerHTML = maxWrong;
+
+
 
 randomWord();
 generateButtons();

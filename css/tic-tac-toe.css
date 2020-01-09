@@ -48,13 +48,15 @@
 #game-name{
     color: #00aa51;
 }
-#game-heading{
-    font-size: 100px;
-    text-align: center;
-    color: #00AA51;
-}
 #mascot{
     margin-top: 290px;
+}
+.main-header{
+    position: absolute;
+    left: calc(50% - 88px);
+    font-size: 50px;
+
+    color: #00AA51;
 }
 
 

@@ -1,24 +1,25 @@
-/*.body{*/
-/*    background-color: #EFDECF;*/
-/*}*/
-.home-button{
-    font-size: 2rem;
-    color: white;
-    background-color: #9b2943;
+.body{
+    background-color: #EFDECF;
 }
-.back-game-button{
-    font-size: 2rem;
-    color: white;
-    background-color: #9b2943;
-}
+
 .box{
     margin: 0 auto;
     width: 45px;
     border: 1px solid black;
     text-align: center;
 }
+.main-header{
+    position: absolute;
+    left: calc(50% - 88px);
+
+    color: #00AA51;
+}
+#divContainer{
+    margin-top: 8em;
+}
 
 #square-container{
+
     width: 160px;
     height: 180px;
     margin: 0 auto;
@@ -76,12 +77,6 @@
 #show-rounds{
 
 }
-#game-heading{
-    font-size: 100px;
-    text-align: center;
-    color: #00AA51;
-    margin-bottom: 5rem;
-}
 #game-name{
     color: #00aa51;
 }
@@ -89,6 +84,11 @@
     background-color: #efdecf;
     animation: fadeIn;
 }
-#home-button-container{
-
+#back-button{
+    color: white;
+    background-color: #9b2943;
+}
+#home-button{
+    color: white;
+    background-color: #9b2943;
 }
